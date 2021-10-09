@@ -1,0 +1,6 @@
+main.c
+*.out
+*.gch
+*.o
+*.a
+*.so
