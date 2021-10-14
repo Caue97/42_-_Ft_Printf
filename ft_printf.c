@@ -6,13 +6,13 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:13:27 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/09 20:50:34 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/14 19:04:24 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_base(const char *format_argument, ...)
+int	ft_printf(const char *format_argument, ...)
 {
 	char			*through;
 	unsigned int	ascii_ar;
@@ -20,23 +20,30 @@ int	ft_printf_base(const char *format_argument, ...)
 	through = NULL;
 	ascii_ar = 0;
 	
-	va_list arguments;
+	va_list	arguments;
 	va_start (arguments, format_argument);
 	
-	while (*through != NULL)
+	through = (char *)format_argument;
+	while (*through)
 	{
-		through = format_argument;
+		through = (char *)format_argument;
 		while (*through != '%')
 		{
-			//ft_putchar(*through);
+			write(1, &through, 10);
 			through++;
 		}
-		through++;
-
-		// parte para selecionar a função em relação ao argumento
-
+		
+		
+		//parte para selecionar a função em relação ao argumento
+		
 		through++;
 	}
 	va_end(arguments);
 	return(1);
+}
+
+int	main()
+{
+	ft_printf("%d", 9);
+	printf("%d", 9);
 }

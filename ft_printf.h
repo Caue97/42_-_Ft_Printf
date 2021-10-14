@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:17:06 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/09 20:12:23 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/14 18:48:16 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@
  * 
  * @return if the function worked or not
  */
-int	ft_printf_base(const char *format_argument, ...);
+int	ft_printf(const char *format_argument, ...);
 
 #endif
