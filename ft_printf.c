@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:13:27 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/14 19:04:24 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/14 19:50:37 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,4 @@ int	ft_printf(const char *format_argument, ...)
 	}
 	va_end(arguments);
 	return(1);
-}
-
-int	main()
-{
-	ft_printf("%d", 9);
-	printf("%d", 9);
 }
