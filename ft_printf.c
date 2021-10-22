@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:13:27 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/20 18:33:54 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/22 19:32:44 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ int selector(char *argument_letter, va_list arg_list)
 	else if (*argument_letter == 'u')
 		letters = type_u(va_arg(arg_list, unsigned int));
 	else if (*argument_letter == 'x')
-		letters = type_lower_x(va_arg(arg_list, unsigned int));
+		letters = type_lower_x(va_arg(arg_list, unsigned int), "0123456789abcdef");
 	else if (*argument_letter == 'X')
-		letters = type_upper_x(va_arg(arg_list, unsigned int));
+		letters = type_upper_x(va_arg(arg_list, unsigned int), "0123456789ABCDEF");
 	else if (*argument_letter == '%')
 	{
 		write(1, "%", 1);

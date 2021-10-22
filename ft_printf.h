@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:17:06 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/22 19:26:47 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/22 19:57:09 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
  * 
  * @param ch The char to be printed
  */
-void ft_putchar(char ch);
+void	ft_putchar(char ch);
 
 /**
  * @brief This function selects how to print the text for the argument based on
@@ -35,7 +35,7 @@ void ft_putchar(char ch);
  * 
  * @return the number of things read in the argument 
  */
-int selector(char *argument_letter, va_list arg_list);
+int		selector(char *argument_letter, va_list arg_list);
 
 /**
  * @brief Recreation of the printf function
@@ -45,7 +45,7 @@ int selector(char *argument_letter, va_list arg_list);
  * 
  * @return if the function worked or not
  */
-int	ft_printf(const char *format_argument, ...);
+int		ft_printf(const char *format_argument, ...);
 
 /**
  * @brief Treats the argument %c in the function ft_printf
@@ -53,7 +53,7 @@ int	ft_printf(const char *format_argument, ...);
  * @param printing the character passed to print
  * @return the quantity of characters printed
  */
-int type_c(char printing);
+int		type_c(char printing);
 
 /**
  * @brief Treats the argument %d in the function ft_printf
@@ -61,7 +61,7 @@ int type_c(char printing);
  * @param number the decimal based number passed to print
  * @return the quantity of characters printed
  */
-int type_d(int number);
+int		type_d(int number);
 
 /**
  * @brief Treats the argument %i in the function ft_printf
@@ -69,7 +69,7 @@ int type_d(int number);
  * @param number the decimal based int passed to print
  * @return the quantity of characters printed
  */
-int type_i(int number);
+int		type_i(int number);
 
 /**
  * @brief Treats the argument %s in the function ft_printf
@@ -77,7 +77,7 @@ int type_i(int number);
  * @param string_print the string passed to print
  * @return the quantity of characters printed
  */
-int type_s(char *string_print);
+int		type_s(char *string_print);
 
 /**
  * @brief Treats the argument %u in the function ft_printf
@@ -85,6 +85,33 @@ int type_s(char *string_print);
  * @param uns_number the (unsigned int) number passed to print
  * @return the quantity of characters printed 
  */
-int type_u(unsigned int uns_number);
+int		type_u(unsigned int uns_number);
+
+/**
+ * @brief Treats the argument %x in the function ft_printf
+ * 
+ * @param hexadec the hexadecimal information passed to print
+ * @param base_num the hexadecimal base used
+ * @return the quantity of characters printed 
+ */
+int		type_lower_x(unsigned long hexadec, char *base_num);
+
+/**
+ * @brief Treats the argument %X in the function ft_printf
+ * 
+ * @param hexadec the hexadecimal information passed to print
+ * @param base_num the hexadecimal base used
+ * @return the quantity of characters printed 
+ */
+int		type_upper_x(unsigned long hexadec, char *base_num);
+
+/**
+ * @brief Used in the functions, inside ft_printf, that treat the %x and %X argument
+ * they check to see if the base we passed for the function is viable
+ * 
+ * @param base is a string with the all elements of the numerical base inside it
+ * @return If the base is viable or not
+ */
+int		base_check(char *base);
 
 #endif

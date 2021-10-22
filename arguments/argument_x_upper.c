@@ -6,13 +6,13 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/18 16:23:13 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/22 19:31:44 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int type_upper_x()
+int type_upper_x(unsigned long hexadec, char *base_num)
 {
 	
 }

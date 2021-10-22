@@ -6,69 +6,62 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/18 17:12:40 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/22 19:52:36 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int type_lower_x()
+int	type_lower_x(unsigned long hexadec, char *base_num)
 {
-	
+	int    base_size;
+    int    *hexadec_final;
+    int    counter_01;
+    int    quantity_read;
+
+    counter_01 = 0;
+    base_size = 0;
+    quantity_read = 0;
+    hexadec = (unsigned int)hexadec;
+    if (base_check(base_num))
+    {
+        base_size = ft_strlen(&base_num[base_size]);
+        while (hexadec)
+        {
+            hexadec_final[counter_01] = hexadec % base_size;
+            hexadec = hexadec / base_size;
+            counter_01++;
+        }
+        quantity_read = counter_01;
+        if (counter_01 == 0)
+            quantity_read = write(1, "0", 1);
+        while (--counter_01 >= 0)
+            ft_putchar(base_num[hexadec_final[counter_01]]);
+    }
+    return (quantity_read);
 }
 
-/*
-int    check_base( char *base)
+int	base_check(char *base)
 {
-    int    i;
-    int    z;
+    int    counter_tf;
+    int    counter_c;
 
-    i = 0;
-    z = 0;
+    counter_tf = 0;
+    counter_c = 0;
     if (base[0] == '\0' || base[1] == '\0')
         return (0);
-    while (base[i])
+    while (base[counter_tf])
     {
-        z = i + 1;
-        if (base[i] < 32 || base[i] > 126)
+        counter_c = counter_tf + 1;
+        if (base[counter_tf] < 32 || base[counter_tf] > 126)
             return (0);
-        while (base[z])
+        while (base[counter_c])
         {
-            if (base[i] == base[z])
+            if (base[counter_tf] == base[counter_c])
                 return (0);
-            z++;
+            counter_c++;
         }
-        i++;
+        counter_tf++;
     }
     return (1);
 }
-
-int    ft_printf_x(unsigned long nbr, char *base)
-{
-    int    size_base;
-    int    nbr_final[100];
-    int    i;
-    int    ret;
-
-    i = 0;
-    size_base = 0;
-    ret = 0;
-    nbr = (unsigned int)nbr;
-    if (check_base(base))
-    {
-        size_base = ft_strlen(&base[size_base]);
-        while (nbr)
-        {
-            nbr_final[i] = nbr % size_base;
-            nbr = nbr / size_base;
-            i++;
-        }
-        ret = i;
-        if (i == 0)
-            ret = write(1, "0", 1);
-        while (--i >= 0)
-            ft_putchar_fd(base[nbr_final[i]], 1);
-    }
-    return (ret);
-}
-*/
