@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:17:06 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/18 16:05:00 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/22 19:26:47 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,45 @@ int selector(char *argument_letter, va_list arg_list);
  * @return if the function worked or not
  */
 int	ft_printf(const char *format_argument, ...);
+
+/**
+ * @brief Treats the argument %c in the function ft_printf
+ * 
+ * @param printing the character passed to print
+ * @return the quantity of characters printed
+ */
+int type_c(char printing);
+
+/**
+ * @brief Treats the argument %d in the function ft_printf
+ * 
+ * @param number the decimal based number passed to print
+ * @return the quantity of characters printed
+ */
+int type_d(int number);
+
+/**
+ * @brief Treats the argument %i in the function ft_printf
+ * 
+ * @param number the decimal based int passed to print
+ * @return the quantity of characters printed
+ */
+int type_i(int number);
+
+/**
+ * @brief Treats the argument %s in the function ft_printf
+ * 
+ * @param string_print the string passed to print
+ * @return the quantity of characters printed
+ */
+int type_s(char *string_print);
+
+/**
+ * @brief Treats the argument %u in the function ft_printf
+ * 
+ * @param uns_number the (unsigned int) number passed to print
+ * @return the quantity of characters printed 
+ */
+int type_u(unsigned int uns_number);
 
 #endif

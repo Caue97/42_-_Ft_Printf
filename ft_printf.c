@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:13:27 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/19 22:13:00 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/20 18:33:54 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_printf(const char *format_argument, ...)
 	{
 		while (*through != '%')
 		{
-			putchar(through);
+			putchar(*through);
 			c_read++;
 			through++;
 		}
@@ -66,7 +66,7 @@ int selector(char *argument_letter, va_list arg_list)
 		letters = type_upper_x(va_arg(arg_list, unsigned int));
 	else if (*argument_letter == '%')
 	{
-		write(1, '%', 1);
+		write(1, "%", 1);
 		letters = 1;
 	}
 	else 
