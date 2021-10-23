@@ -6,7 +6,7 @@
 #    By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 18:30:16 by felcaue-          #+#    #+#              #
-#    Updated: 2021/10/23 19:07:07 by felcaue-         ###   ########.fr        #
+#    Updated: 2021/10/23 19:40:47 by felcaue-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		= libftprintf.a
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 LIB			= ar -rcs
-RM			= /bin/rm -f
+RM			= /bin/rm -rf
 
 DIRECTORY	=	Objs_printf
 
@@ -30,17 +30,17 @@ ARGS		=	argument_c.c argument_d.c argument_i.c \
 ADD_ARG		=	$(addprefix arguments/,$(ARGS))
 				
 
-OBJS		= $(SRCS:.c=.o)
+OBJS		= $(addprefix ./$(DIRECTORY)/,$(SRCS:.c=.o))
 
 all:		$(NAME)
 
 $(DIRECTORY)/%.o:	%.c
 					mkdir -p $(@D)
-					make -C libft
-					cp libft/libft.a $(NAME)
-					$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+					$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJS) $(INCLUDE)
+			make -C libft
+			cp libft/libft.a $(NAME)
 			$(LIB) $(NAME) $(OBJS)
 
 git:
@@ -49,10 +49,12 @@ git:
 			git push
 
 clean:
-			$(RM) $(OBJS)
+			$(RM) $(DIRECTORY)
+			make -C libft clean
 
 fclean:		clean
 			$(RM) $(NAME)
+			make -C libft fclean
 
 re:			fclean all
 
