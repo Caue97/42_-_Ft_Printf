@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:13:27 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/22 19:32:44 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/23 18:24:01 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int selector(char *argument_letter, va_list arg_list)
 	else if (*argument_letter == 's')
 		letters = type_s(va_arg(arg_list, char *));
 	else if (*argument_letter == 'p')
-		letters = type_p(va_arg(arg_list, unsigned long int));
+		letters = type_p(va_arg(arg_list, unsigned long int), "0123456789abcdef");
 	else if (*argument_letter == 'd')
 		letters = type_d(va_arg(arg_list, int));
 	else if (*argument_letter == 'i')

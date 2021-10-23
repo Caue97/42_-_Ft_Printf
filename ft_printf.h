@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:17:06 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/22 19:57:09 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/23 18:29:41 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,16 @@ int		type_lower_x(unsigned long hexadec, char *base_num);
  * @return the quantity of characters printed 
  */
 int		type_upper_x(unsigned long hexadec, char *base_num);
+
+/**
+ * @brief Treats the argument %p in the function ft_printf
+ * 
+ * @param hexadep the void pointer information passed to print the adress of the pointer
+ * in hexadecimal
+ * @param base_n the hexadecimal base used
+ * @return the quantity of characters printed 
+ */
+int type_p(unsigned long hexadep, char *base_n);
 
 /**
  * @brief Used in the functions, inside ft_printf, that treat the %x and %X argument
