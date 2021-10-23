@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/19 21:42:06 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/23 19:09:19 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int type_d(int number)
 	int	counter;
 	int	quantity_read;
 
-	string_d = itoa(number);
+	string_d = ft_itoa(number);
 	quantity_read = 0;
 	counter = ft_strlen(string_d);
 	while (!counter)

@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:13:27 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/23 18:24:01 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/23 19:00:45 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,10 @@
 int	ft_printf(const char *format_argument, ...)
 {
 	char			*through;
-	unsigned int	ascii_ar;
 	int				c_read;
 	
 	through = NULL;
-	ascii_ar = 0;
 	c_read = 0;
-	
 	va_list	arguments;
 	va_start (arguments, format_argument);
 	

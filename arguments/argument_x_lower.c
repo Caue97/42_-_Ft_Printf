@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/22 19:58:56 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/23 19:12:35 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	type_lower_x(unsigned long hexadec, char *base_num)
 	int	counter_01;
 	int	quantity_read;
 
+	hexadec_final = NULL;
 	counter_01 = 0;
 	base_size = 0;
 	quantity_read = 0;
