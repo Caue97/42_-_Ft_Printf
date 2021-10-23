@@ -4,3 +4,4 @@ main.c
 *.o
 *.a
 *.so
+Objs_printf
