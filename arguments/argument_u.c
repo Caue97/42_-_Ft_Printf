@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/22 18:48:16 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/23 20:05:22 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,14 @@ static void	convt_to_number(int n_conv, char *d_str, long int length);
 
 int type_u(unsigned int uns_number)
 {
-	char *string_d;
+	char *string_u;
 	int	counter;
 	int	quantity_read;
 
-	string_d = uns_itoa(uns_number);
-	quantity_read = 0;
-	counter = ft_strlen(string_d);
-	while (!counter)
-	{
-		write(1, string_d, 1);
-		quantity_read++;
-		string_d++;
-		counter--;
-	}
+	string_u = uns_itoa(uns_number);
+	counter = ft_strlen(string_u);
+	quantity_read = write(1, string_u, counter);
+	free(string_u);
 	return (quantity_read);
 }
 

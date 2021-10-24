@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:13:27 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/23 19:00:45 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/23 19:51:51 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_printf(const char *format_argument, ...)
 {
-	char			*through;
-	int				c_read;
+	char	*through;
+	int		c_read;
 	
 	through = NULL;
 	c_read = 0;
@@ -25,15 +25,14 @@ int	ft_printf(const char *format_argument, ...)
 	through = (char *)format_argument;
 	while (*through)
 	{
-		while (*through != '%')
+		if (*through == '%')
 		{
-			putchar(*through);
-			c_read++;
+			through++;
+			c_read += selector(through, arguments);
 			through++;
 		}
-		through++;
-		c_read += selector(through, arguments);
-		
+		ft_putchar(*through);
+		c_read++;
 		through++;
 	}
 	va_end(arguments);
@@ -62,10 +61,7 @@ int selector(char *argument_letter, va_list arg_list)
 	else if (*argument_letter == 'X')
 		letters = type_upper_x(va_arg(arg_list, unsigned int), "0123456789ABCDEF");
 	else if (*argument_letter == '%')
-	{
-		write(1, "%", 1);
-		letters = 1;
-	}
+		letters = write(1, "%", 1);
 	else 
 	{
 		printf("ERROR: Argument type, letter after %%, not valid");

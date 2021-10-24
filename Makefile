@@ -6,7 +6,7 @@
 #    By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 18:30:16 by felcaue-          #+#    #+#              #
-#    Updated: 2021/10/23 19:43:13 by felcaue-         ###   ########.fr        #
+#    Updated: 2021/10/23 20:18:20 by felcaue-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,9 +56,14 @@ fclean:		clean
 			$(RM) $(NAME)
 			make -C libft fclean
 
+my_clean:		clean
+			$(RM) $(NAME)
+			make -C libft fclean
+			clear
+
 re:			fclean all
 
-comp:		all
+comp:		re
 			gcc main.c libftprintf.a
 			clear
 			./a.out

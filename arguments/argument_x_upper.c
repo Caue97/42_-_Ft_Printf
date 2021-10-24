@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/23 19:12:26 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/23 20:09:46 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int type_upper_x(unsigned long hexadec, char *base_num)
 	hexadec = (unsigned int)hexadec;
 	if (base_check(base_num))
 	{
-		base_size = ft_strlen(&base_num[base_size]);
+		base_size = ft_strlen(base_num);
 		while (hexadec)
 		{
 			hexadec_final[counter_01] = hexadec % base_size;
