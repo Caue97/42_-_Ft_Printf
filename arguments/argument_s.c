@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/24 22:18:24 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/24 23:56:18 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 int	type_s(char *string_print)
 {
 	int	counter;
-
+	
+	if (!string_print)
+	{
+        return (write(1, "(null)", ft_strlen("(null)")));
+	}
 	counter = ft_strlen(string_print);
 	return (write(1, string_print, counter));
 }
