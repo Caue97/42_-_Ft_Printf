@@ -6,20 +6,20 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/23 20:05:22 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/24 22:19:01 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-char *uns_itoa(unsigned int number);
+char		*uns_itoa(unsigned int number);
 static void	convt_to_number(int n_conv, char *d_str, long int length);
 
-int type_u(unsigned int uns_number)
+int	type_u(unsigned int uns_number)
 {
-	char *string_u;
-	int	counter;
-	int	quantity_read;
+	char	*string_u;
+	int		counter;
+	int		quantity_read;
 
 	string_u = uns_itoa(uns_number);
 	counter = ft_strlen(string_u);
@@ -28,7 +28,7 @@ int type_u(unsigned int uns_number)
 	return (quantity_read);
 }
 
-char *uns_itoa(unsigned int number)
+char	*uns_itoa(unsigned int number)
 {
 	char			*ret_strng;
 	unsigned int	num_og_c;

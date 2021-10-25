@@ -6,17 +6,17 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/23 20:02:25 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/24 22:12:37 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int type_i(int number)
+int	type_i(int number)
 {
-	char *string_i;
-	int	counter;
-	int	quantity_read;
+	char	*string_i;
+	int		counter;
+	int		quantity_read;
 
 	string_i = ft_itoa(number);
 	counter = ft_strlen(string_i);

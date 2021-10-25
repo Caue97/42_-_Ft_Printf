@@ -5,3 +5,4 @@ main.c
 *.a
 *.so
 Objs_printf
+ft_printf_tester

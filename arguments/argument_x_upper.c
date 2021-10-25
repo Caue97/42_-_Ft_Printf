@@ -6,20 +6,19 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/23 20:09:46 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/24 22:34:23 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int type_upper_x(unsigned long hexadec, char *base_num)
+int	type_upper_x(unsigned long hexadec, char *base_num)
 {
 	int	base_size;
-	int	*hexadec_final;
+	int	hexadec_final[100];
 	int	counter_01;
 	int	quantity_read;
 
-	hexadec_final = NULL;
 	counter_01 = 0;
 	base_size = 0;
 	quantity_read = 0;

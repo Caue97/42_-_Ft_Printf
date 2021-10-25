@@ -1,0 +1,9 @@
+if (*through == '%')
+		{
+			through++;
+			c_read += selector(through, arguments);
+			through++;
+		}
+		ft_putchar(*through);
+		c_read++;
+		through++;
