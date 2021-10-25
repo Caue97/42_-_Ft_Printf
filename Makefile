@@ -6,7 +6,7 @@
 #    By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 18:30:16 by felcaue-          #+#    #+#              #
-#    Updated: 2021/10/23 20:18:20 by felcaue-         ###   ########.fr        #
+#    Updated: 2021/10/24 23:54:27 by felcaue-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,12 @@ git:
 			git add .
 			git commit -m "updating norminette v3"
 			git push
+
+my_git:		
+			clear
+			git add .
+			git commit -m "Atualização e Progresso"
+			git push origin
 
 clean:
 			$(RM) $(DIRECTORY)

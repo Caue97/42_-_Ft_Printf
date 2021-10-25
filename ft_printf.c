@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:13:27 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/24 23:00:26 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/24 23:47:48 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,12 @@ int	ft_printf(const char *format_argument, ...)
 			c_read += selector(through, arguments);
 			through++;
 		}
-		ft_putchar(*through);
-		c_read++;
-		through++;
+		else
+		{
+			ft_putchar(*through);
+			c_read++;
+			through++;
+		}
 	}
 	va_end(arguments);
 	return (c_read);
