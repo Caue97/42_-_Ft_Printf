@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/24 22:37:21 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/24 23:39:52 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	type_c(char printing)
 {
-	write(1, &printing, 1);
+	ft_putchar(printing);
 	return (1);
 }
