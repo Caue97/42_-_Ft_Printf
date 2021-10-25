@@ -6,14 +6,14 @@
 #    By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 18:30:16 by felcaue-          #+#    #+#              #
-#    Updated: 2021/10/24 23:54:27 by felcaue-         ###   ########.fr        #
+#    Updated: 2021/10/25 12:46:45 by felcaue-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libftprintf.a
 
 CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -Werror -g
 LIB			= ar -rcs
 RM			= /bin/rm -rf
 
@@ -70,7 +70,12 @@ my_clean:		clean
 re:			fclean all
 
 comp:		re
-			gcc main.c libftprintf.a
+			gcc -g main.c libftprintf.a
+			clear
+			./a.out
+
+comp_debug:		re
+			gcc -g libft/libft.h libft/*.c main.c $(INCLUDE) $(SRCS)
 			clear
 			./a.out
 
