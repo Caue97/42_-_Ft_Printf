@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/24 22:19:01 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/25 00:01:37 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ int	type_u(unsigned int uns_number)
 	int		counter;
 	int		quantity_read;
 
+	if (uns_number == 0)
+	{
+        return (write(1, "0", 1));
+	}
 	string_u = uns_itoa(uns_number);
 	counter = ft_strlen(string_u);
 	quantity_read = write(1, string_u, counter);
