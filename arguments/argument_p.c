@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/25 00:16:00 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/25 00:25:37 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	type_p(unsigned long hexadep, char *base_n)
 	int	hexadep_final[16];
 	int	counter_01;
 	int	quantity_read;
-	
+
 	if (!hexadep)
-        return (write(1, "0x0", 3));
+		return (write(1, "0x0", 3));
 	counter_01 = 0;
 	base_size = 0;
 	quantity_read = 0;

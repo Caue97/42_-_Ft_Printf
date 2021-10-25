@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/25 00:01:37 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/25 00:27:01 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	type_u(unsigned int uns_number)
 
 	if (uns_number == 0)
 	{
-        return (write(1, "0", 1));
+		return (write(1, "0", 1));
 	}
 	string_u = uns_itoa(uns_number);
 	counter = ft_strlen(string_u);
