@@ -6,13 +6,13 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:16:07 by felcaue-          #+#    #+#             */
-/*   Updated: 2021/10/25 00:25:37 by felcaue-         ###   ########.fr       */
+/*   Updated: 2021/10/25 14:35:57 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	type_p_2(int quantity_read, int	counter);
+int	type_p_2(int quantity_read, int counter);
 
 int	type_p(unsigned long hexadep, char *base_n)
 {
@@ -42,7 +42,7 @@ int	type_p(unsigned long hexadep, char *base_n)
 	return (quantity_read);
 }
 
-int	type_p_2(int quantity_read, int	counter)
+int	type_p_2(int quantity_read, int counter)
 {
 	quantity_read = counter;
 	quantity_read += write(1, "0x", 2);
